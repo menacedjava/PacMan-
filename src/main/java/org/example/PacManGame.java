@@ -86,37 +86,37 @@ public class PacManGame extends JPanel implements ActionListener, KeyListener {
         if (move == 3 && ghostY < HEIGHT - 1) ghostY++;
     }
 
-//    @Override
-//    public void keyPressed(KeyEvent e) {
-//        if (e.getKeyCode() == KeyEvent.VK_LEFT && pacX > 0) pacX--;
-//        if (e.getKeyCode() == KeyEvent.VK_RIGHT && pacX < WIDTH - 1) pacX++;
-//        if (e.getKeyCode() == KeyEvent.VK_UP && pacY > 0) pacY--;
-//        if (e.getKeyCode() == KeyEvent.VK_DOWN && pacY < HEIGHT - 1) pacY++;
-//
-//        if (dots[pacX][pacY]) {
-//            dots[pacX][pacY] = false;
-//            score += 10;
-//        }
-//
-//        repaint();
-//    }
-//
-//    @Override
-//    public void keyReleased(KeyEvent e) {
-//    }
-//
-//    @Override
-//    public void keyTyped(KeyEvent e) {
-//    }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT && pacX > 0) pacX--;
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT && pacX < WIDTH - 1) pacX++;
+        if (e.getKeyCode() == KeyEvent.VK_UP && pacY > 0) pacY--;
+        if (e.getKeyCode() == KeyEvent.VK_DOWN && pacY < HEIGHT - 1) pacY++;
 
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("Pac-Man");
-//        PacManGame game = new PacManGame();
-//        frame.add(game);
-//        frame.pack();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-//        frame.setLocationRelativeTo(null);
-//    }
+        if (dots[pacX][pacY]) {
+            dots[pacX][pacY] = false;
+            score += 10;
+        }
+
+        repaint();
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Pac-Man");
+        PacManGame game = new PacManGame();
+        frame.add(game);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+    }
 
 }
