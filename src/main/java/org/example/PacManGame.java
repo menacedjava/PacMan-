@@ -10,14 +10,14 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class PacManGame extends JPanel implements ActionListener, KeyListener {
-//    private final int SIZE = 20;
-//    private final int WIDTH = 20, HEIGHT = 15;
-//    private int pacX = 1, pacY = 1;
-//    private int ghostX, ghostY;
-//    private boolean[][] dots;
-//    private Timer timer;
-//    private Random random = new Random();
-//    private int score = 0;
+    private final int SIZE = 20;
+    private final int WIDTH = 20, HEIGHT = 15;
+    private int pacX = 1, pacY = 1;
+    private int ghostX, ghostY;
+    private boolean[][] dots;
+    private Timer timer;
+    private Random random = new Random();
+    private int score = 0;
 
 //    public PacManGame() {
 //        setPreferredSize(new Dimension(WIDTH * SIZE, HEIGHT * SIZE));
