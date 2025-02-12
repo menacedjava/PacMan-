@@ -39,52 +39,52 @@ public class PacManGame extends JPanel implements ActionListener, KeyListener {
         timer.start();
     }
 
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//
-//        // Chiziqlar
-//        g.setColor(Color.WHITE);
-//        for (int i = 0; i < WIDTH; i++) {
-//            for (int j = 0; j < HEIGHT; j++) {
-//                if (dots[i][j]) {
-//                    g.fillOval(i * SIZE + SIZE / 3, j * SIZE + SIZE / 3, SIZE / 3, SIZE / 3);
-//                }
-//            }
-//        }
-//
-//        // Pac-Man (sariq doira)
-//        g.setColor(Color.YELLOW);
-//        g.fillArc(pacX * SIZE, pacY * SIZE, SIZE, SIZE, 30, 300);
-//
-//        // Yovuzlar (Ghosts)
-//        g.setColor(Color.RED);
-//        g.fillOval(ghostX * SIZE, ghostY * SIZE, SIZE, SIZE);
-//
-//        // Score
-//        g.setColor(Color.WHITE);
-//        g.drawString("Score: " + score, 10, HEIGHT * SIZE - 10);
-//    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        if (pacX == ghostX && pacY == ghostY) {
-//            timer.stop();
-//            JOptionPane.showMessageDialog(this, "Game Over! Score: " + score);
-//            System.exit(0);
-//        }
-//
-//        ghostMove();
-//        repaint();
-//    }
+        // Chiziqlar
+        g.setColor(Color.WHITE);
+        for (int i = 0; i < WIDTH; i++) {
+            for (int j = 0; j < HEIGHT; j++) {
+                if (dots[i][j]) {
+                    g.fillOval(i * SIZE + SIZE / 3, j * SIZE + SIZE / 3, SIZE / 3, SIZE / 3);
+                }
+            }
+        }
 
-//    private void ghostMove() {
-//        int move = random.nextInt(4);
-//        if (move == 0 && ghostX > 0) ghostX--;
-//        if (move == 1 && ghostX < WIDTH - 1) ghostX++;
-//        if (move == 2 && ghostY > 0) ghostY--;
-//        if (move == 3 && ghostY < HEIGHT - 1) ghostY++;
-//    }
+        // Pac-Man (sariq doira)
+        g.setColor(Color.YELLOW);
+        g.fillArc(pacX * SIZE, pacY * SIZE, SIZE, SIZE, 30, 300);
+
+        // Yovuzlar (Ghosts)
+        g.setColor(Color.RED);
+        g.fillOval(ghostX * SIZE, ghostY * SIZE, SIZE, SIZE);
+
+        // Score
+        g.setColor(Color.WHITE);
+        g.drawString("Score: " + score, 10, HEIGHT * SIZE - 10);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (pacX == ghostX && pacY == ghostY) {
+            timer.stop();
+            JOptionPane.showMessageDialog(this, "Game Over! Score: " + score);
+            System.exit(0);
+        }
+
+        ghostMove();
+        repaint();
+    }
+
+    private void ghostMove() {
+        int move = random.nextInt(4);
+        if (move == 0 && ghostX > 0) ghostX--;
+        if (move == 1 && ghostX < WIDTH - 1) ghostX++;
+        if (move == 2 && ghostY > 0) ghostY--;
+        if (move == 3 && ghostY < HEIGHT - 1) ghostY++;
+    }
 
 //    @Override
 //    public void keyPressed(KeyEvent e) {
