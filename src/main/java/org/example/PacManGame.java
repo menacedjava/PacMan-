@@ -19,25 +19,25 @@ public class PacManGame extends JPanel implements ActionListener, KeyListener {
     private Random random = new Random();
     private int score = 0;
 
-//    public PacManGame() {
-//        setPreferredSize(new Dimension(WIDTH * SIZE, HEIGHT * SIZE));
-//        setBackground(Color.BLACK);
-//        setFocusable(true);
-//        addKeyListener(this);
-//        dots = new boolean[WIDTH][HEIGHT];
-//
-//        for (int i = 0; i < WIDTH; i++) {
-//            for (int j = 0; j < HEIGHT; j++) {
-//                dots[i][j] = true;
-//            }
-//        }
-//
-//        ghostX = random.nextInt(WIDTH - 2) + 1;
-//        ghostY = random.nextInt(HEIGHT - 2) + 1;
-//
-//        timer = new Timer(150, this);
-//        timer.start();
-//    }
+    public PacManGame() {
+        setPreferredSize(new Dimension(WIDTH * SIZE, HEIGHT * SIZE));
+        setBackground(Color.BLACK);
+        setFocusable(true);
+        addKeyListener(this);
+        dots = new boolean[WIDTH][HEIGHT];
+
+        for (int i = 0; i < WIDTH; i++) {
+            for (int j = 0; j < HEIGHT; j++) {
+                dots[i][j] = true;
+            }
+        }
+
+        ghostX = random.nextInt(WIDTH - 2) + 1;
+        ghostY = random.nextInt(HEIGHT - 2) + 1;
+
+        timer = new Timer(150, this);
+        timer.start();
+    }
 
 //    @Override
 //    protected void paintComponent(Graphics g) {
